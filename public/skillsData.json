@@ -1,0 +1,80 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": "$20 per session",
+    "rating": "4.8 out of 5",
+    "slotsAvailable": "3 seats left",
+    "duration": "1 hour",
+    "description": "Acoustic guitar lessons for complete beginners. Learn chords, rhythm patterns, and your favorite songs step by step.",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": "$10 per hour",
+    "rating": "4.6 out of 5",
+    "slotsAvailable": "5 seats left",
+    "duration": "1 hour",
+    "description": "Improve your fluency and pronunciation through friendly English conversation practice sessions.",
+    "image": "https://images.unsplash.com/photo-1584697964154-ef2d3a3fc6a9?auto=format&fit=crop&w=1200&q=80",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Web Development Basics",
+    "providerName": "Rahim Uddin",
+    "providerEmail": "rahim@skillswap.com",
+    "price": "$30 per course",
+    "rating": "4.9 out of 5",
+    "slotsAvailable": "4 seats left",
+    "duration": "4 weeks",
+    "description": "Learn to build and style responsive websites using HTML, CSS, and JavaScript. Ideal for beginners.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    "category": "Technology"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Digital Painting for Beginners",
+    "providerName": "Mina Chowdhury",
+    "providerEmail": "mina@skillswap.com",
+    "price": "$25 per session",
+    "rating": "4.7 out of 5",
+    "slotsAvailable": "2 seats left",
+    "duration": "1.5 hours",
+    "description": "Create beautiful digital artworks using Procreate or Photoshop. Learn color blending, shading, and digital brush techniques.",
+    "image": "https://images.unsplash.com/photo-1580136608701-5d4d1a55c8f8?auto=format&fit=crop&w=1200&q=80",
+    "category": "Art"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Cooking Traditional Bangladeshi Dishes",
+    "providerName": "Farzana Karim",
+    "providerEmail": "farzana@skillswap.com",
+    "price": "$15 per class",
+    "rating": "4.9 out of 5",
+    "slotsAvailable": "6 seats left",
+    "duration": "2 hours",
+    "description": "Cook authentic Bangladeshi meals like biryani, khichuri, bhuna, and pitha with easy step-by-step lessons.",
+    "image": "https://images.unsplash.com/photo-1604908811760-1a4b4a0a57d3?auto=format&fit=crop&w=1200&q=80",
+    "category": "Cooking"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Basic Photography Skills",
+    "providerName": "Tanvir Ahmed",
+    "providerEmail": "tanvir@skillswap.com",
+    "price": "$18 per workshop",
+    "rating": "4.5 out of 5",
+    "slotsAvailable": "5 seats left",
+    "duration": "3 hours",
+    "description": "Hands-on photography workshop covering DSLR settings, composition, and natural lighting for beginners.",
+    "image": "https://images.unsplash.com/photo-1519183071298-a2962be90b8e?auto=format&fit=crop&w=1200&q=80",
+    "category": "Photography"
+  }
+]
