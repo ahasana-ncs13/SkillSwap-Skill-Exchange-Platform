@@ -16,7 +16,7 @@ const Navbar = () => {
 
     const links = <>
     <NavLink className='mr-5' to='/'>Home</NavLink>
-    <NavLink className='mr-5'>My Profile</NavLink>
+    <NavLink className='mr-5' to='/myProfile' >My Profile</NavLink>
     </>
 
     return (
@@ -46,7 +46,7 @@ const Navbar = () => {
   <div className="navbar-end">
     <img className='w-12 rounded-full mr-3' src='https://img.icons8.com/?size=100&id=98957&format=png&color=000000' alt="" />
     {
-      user? <button onClick={handleLogOut} className='btn bg-sky-100'>Logout</button> :  <Link to='/login' className="btn  bg-red-100 ">Login</Link>
+      user ? <button onClick={handleLogOut} className='btn bg-sky-100'>Logout</button> :  <Link to='/login' className="btn  bg-red-100 ">Login</Link>
     }
     
   </div>
