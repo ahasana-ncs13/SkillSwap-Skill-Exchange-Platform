@@ -46,9 +46,9 @@ const DetailsCard = ({skill}) => {
            <form onSubmit={handleBookForm} >
                 <fieldset className="fieldset p-2">
           <label className="label">Name</label>
-          <input type="text" className="input" placeholder="Name" />
+          <input required type="text" className="input" placeholder="Name" />
           <label className="label">Email</label>
-          <input type="email" className="input" placeholder="Email" />
+          <input required type="email" className="input" placeholder="Email" />
           <button className="btn bg-red-900 text-white mt-4">Submit</button>
         </fieldset>
              </form>

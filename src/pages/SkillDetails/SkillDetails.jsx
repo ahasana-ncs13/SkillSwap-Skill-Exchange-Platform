@@ -8,7 +8,7 @@ const SkillDetails = () => {
     const [skill , setSkill]=useState({})
 
     useEffect(()=>{
-       const singleSkill = data.find(skill => skill.skillId==id)
+       const singleSkill = data.find(skills => skills.skillId==id)
        setSkill(singleSkill)
     },[data,id])
     // console.log(data)

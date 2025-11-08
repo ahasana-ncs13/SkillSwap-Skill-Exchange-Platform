@@ -1,5 +1,5 @@
 import React, { use, useState } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../ContextApi/AuthContext/AuthContext';
 
 const Login = () => {
@@ -7,6 +7,9 @@ const Login = () => {
 
     const [error , setError]=useState(" ")
     const navigate = useNavigate()
+    const location = useLocation();
+    console.log(location)
+
 
 
     const handleSignIn=(event)=>{
@@ -19,17 +22,14 @@ const Login = () => {
         .then(result =>{
             const userData =result.user
 
-            navigate(`${location.state? location.state : "/skillDetails/:id" }`)
-            
+            navigate( location.state || '/')
+
             console.log(userData)
          })
         .catch(error =>{
             setError(error.message)
             console.log(error.message)
         })
-
-        
-        navigate('/')
     }
 
     const handleGoogleSignIn=()=>{
@@ -41,7 +41,7 @@ const Login = () => {
         .catch(error=>{
             console.log(error)
         })
-        navigate('/') 
+         navigate( location.state || '/')
     }
      
     return (
