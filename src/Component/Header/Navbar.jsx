@@ -1,12 +1,22 @@
-import React from 'react';
-import { NavLink } from 'react-router';
+import React, { use } from 'react';
+import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../../ContextApi/AuthContext/AuthContext';
 
 
 const Navbar = () => {
 
+  const {logOutUser,user}=use(AuthContext)
+  console.log(user)
+
+  const handleLogOut =()=>{
+    logOutUser()
+    .then()
+    .catch()
+  }
+
     const links = <>
     <NavLink className='mr-5' to='/'>Home</NavLink>
-    <NavLink className='mr-5' to='/'>My Profile</NavLink>
+    <NavLink className='mr-5'>My Profile</NavLink>
     </>
 
     return (
@@ -35,7 +45,10 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
     <img className='w-12 rounded-full mr-3' src='https://img.icons8.com/?size=100&id=98957&format=png&color=000000' alt="" />
-    <a className="btn bg-sky-100">Login</a>
+    {
+      user? <button onClick={handleLogOut} className='btn bg-sky-100'>Logout</button> :  <Link to='/login' className="btn  bg-red-100 ">Login</Link>
+    }
+    
   </div>
 </div>
     );
