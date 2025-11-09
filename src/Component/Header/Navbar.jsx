@@ -44,7 +44,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <img className='w-12 rounded-full mr-3' src='https://img.icons8.com/?size=100&id=98957&format=png&color=000000' alt="" />
+    <img className='w-12 h-12 rounded-full mr-3 object-cover' src={`${user? user.photoURL : 'https://img.icons8.com/?size=100&id=98957&format=png&color=000000' }`}alt="" />
     {
       user ? <button onClick={handleLogOut} className='btn bg-sky-100'>Logout</button> :  <Link to='/login' className="btn  bg-red-100 ">Login</Link>
     }

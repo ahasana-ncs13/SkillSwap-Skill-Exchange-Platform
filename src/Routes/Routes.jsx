@@ -7,6 +7,7 @@ import SignUp from '../pages/SignUp/SignUp';
 import SkillDetails from '../pages/skillDetails/skillDetails';
 import PrivateRoutes from './PrivateRoutes';
 import MyProfile from '../pages/MyProfile/MyProfile';
+import UpdateProfile from '../pages/UpdateProfile/UpdateProfile';
 
 export const router = createBrowserRouter([
   {
@@ -35,7 +36,15 @@ export const router = createBrowserRouter([
         },
         {
           path:'/myProfile',
-          Component:MyProfile,
+           element:<PrivateRoutes>
+         <MyProfile></MyProfile>
+          </PrivateRoutes>,
+        },
+        {
+          path:'/updateProgile',
+          element:<PrivateRoutes>
+          <UpdateProfile></UpdateProfile>
+          </PrivateRoutes>,
         }
     ]
   }
