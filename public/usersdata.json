@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Maya Rahman",
+    "feedback": "I learned guitar through SkillSwap! The platform is easy and fun to use.",
+    "image": "https://images.unsplash.com/photo-1599566150163-29194dcaad36"
+  },
+  {
+    "id": 2,
+    "name": "Rafiul Islam",
+    "feedback": "I taught yoga to local learners — great way to share skills!",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+  },
+  {
+    "id": 3,
+    "name": "Nusrat Chowdhury",
+    "feedback": "Such a friendly community! I swapped my graphic design lessons for French classes.",
+    "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+  }
+]

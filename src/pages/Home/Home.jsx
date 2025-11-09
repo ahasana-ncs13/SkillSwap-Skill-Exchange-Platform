@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import HeroSlider from '../../Component/HeroSlider/HeroSlider';
 import { useLoaderData } from 'react-router';
 import SkillsCard from '../../Component/SkillsCard/SkillsCard';
 import TopRated from '../../Component/TopRated/TopRated';
 import HowItWorks from '../../Component/HowItWorks/HowItWorks';
+import WhatUserSay from '../../Component/WhatUserSay/WhatUserSay';
+
+const userData = fetch('/usersdata.json')
+.then(res => res.json())
 
 
 const Home = () => {
@@ -28,6 +32,10 @@ const Home = () => {
             
             <TopRated></TopRated>
             <HowItWorks></HowItWorks>
+            
+            <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
+            <WhatUserSay userData={userData}></WhatUserSay>
+           </Suspense>
         </div>
     );
 };

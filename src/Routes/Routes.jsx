@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
         {
             path:'/',
             Component:Home,
-            loader:()=>fetch('/skillsData.json')
+            loader:()=>fetch('/skillsData.json'),
         },
         {
             path:'/login',
