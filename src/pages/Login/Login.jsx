@@ -1,6 +1,8 @@
 import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../../ContextApi/AuthContext/AuthContext';
+import { FaRegEye } from 'react-icons/fa';
+import { LuEyeClosed } from 'react-icons/lu';
 
 const Login = () => {
     const {signInUser,signInWithGoogle}=use(AuthContext)
@@ -8,8 +10,9 @@ const Login = () => {
     const [error , setError]=useState(" ")
     const navigate = useNavigate()
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
 
+    const [showPassword,setShowPassword]=useState(false)
 
 
     const handleSignIn=(event)=>{
@@ -43,7 +46,10 @@ const Login = () => {
         })
          navigate( location.state || '/')
     }
-     
+
+    const handleShowPassword = ()=>{
+        setShowPassword(!showPassword)
+    }     
     return (
     <div className="bg-sky-50 p-20">
         <div className="text-center my-10">
@@ -56,11 +62,16 @@ const Login = () => {
         <fieldset className="fieldset">
             {/* email  */}
           <label className="label">Email</label>
-          <input name='email' type="email" className="input" placeholder="Email" />
+          <input name='email' type="email" className="input" placeholder="Email" required/>
    
            {/* password */}
+           <div className="relative">
           <label className="label">Password</label>
-          <input name='password' type="password" className="input" placeholder="Password" />
+          <input name='password' type= {showPassword? 'text' :"password" } className="input" placeholder="Password" required />
+          <button onClick={handleShowPassword} className=' absolute right-6 top-8'> 
+            {showPassword? <LuEyeClosed />:<FaRegEye />}
+          </button>
+          </div>
 
           <p className='text-red-500 font-semibold'> 
             {

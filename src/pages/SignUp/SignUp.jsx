@@ -2,10 +2,13 @@ import React, { use, useState } from 'react';
 import { Link, useNavigate} from 'react-router';
 import { AuthContext } from '../../ContextApi/AuthContext/AuthContext';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { FaRegEye } from 'react-icons/fa';
+import { LuEyeClosed } from 'react-icons/lu';
 
 const SignUp = () => {
     const {createUser,signInWithGoogle} = use(AuthContext)
     const [error , setError]=useState("")
+    const [showPassword , setShowPassword]=useState(false)
     const navigate = useNavigate()
 
    
@@ -52,6 +55,10 @@ const SignUp = () => {
     }
 
 
+    const handleShowPassword = ()=>{
+      setShowPassword(!showPassword)
+    }
+
     return (
     <div className="bg-sky-50 p-20">
         <div className="text-center my-10">
@@ -76,8 +83,15 @@ const SignUp = () => {
           <input required  name='email' type="email" className="input" placeholder="Email" />
 
           {/* password  */}
+          <div className="">
           <label className="label">Password</label>
-          <input required name='password' type="password" className="input" placeholder="Password" />
+          <input required name='password' type= {showPassword? "text": "password"  } className="input relative" placeholder="Password" />
+          <button onClick={handleShowPassword}  className=' absolute bottom-53 left-80'>
+            {showPassword?  <LuEyeClosed /> : <FaRegEye />}
+          </button>
+
+          </div>
+         
 
           <div><a className="link link-hover">Forgot password?</a></div>
           <p className='text-red-500 font-semibold'>
