@@ -13,7 +13,7 @@ const WhatUserSay = ({userData}) => {
             </div>
             <div className=" flex justify-between my-10 gap-5">
             {
-                 data.map(singleData => <UserSay singleData={singleData}></UserSay> )
+                 data.map(singleData => <UserSay key={singleData.id} singleData={singleData}></UserSay> )
             }
            </div>
         </div>

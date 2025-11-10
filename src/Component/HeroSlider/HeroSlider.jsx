@@ -18,13 +18,10 @@ const HeroSlider = ({data}) => {
       slidesPerView={1}
        navigation={true} modules={[Navigation]}
         className="heroSwiper mx-auto h-150 object-cover my-5 w-11/12" 
-
-        //   onSlideChange={() => console.log('slide change')}
-    //   onSwiper={(swiper) => console.log(swiper)}
     >
 
      { data.map(slides => <SwiperSlide  >
-        <div className="">
+        <div className="mt-10">
             <div className="flex justify-center items-center">
             <img src={slides.image} alt=""  /> 
             </div>

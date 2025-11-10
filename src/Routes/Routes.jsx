@@ -19,6 +19,7 @@ export const router = createBrowserRouter([
             path:'/',
             Component:Home,
             loader:()=>fetch('/skillsData.json'),
+            hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>
         },
         {
             path:'/login',
@@ -33,7 +34,9 @@ export const router = createBrowserRouter([
           element:<PrivateRoutes>
           <SkillDetails></SkillDetails>
           </PrivateRoutes>,
-          loader:()=>fetch('/skillsData.json')
+          loader:()=>fetch('/skillsData.json'),
+          
+          hydrateFallbackElement:<span className="loading loading-bars loading-xl"></span>
         },
         {
           path:'/myProfile',
