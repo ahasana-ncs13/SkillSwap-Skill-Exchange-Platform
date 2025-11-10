@@ -27,11 +27,11 @@ const Login = () => {
 
             navigate( location.state || '/')
 
-            console.log(userData)
+            // console.log(userData)
          })
         .catch(error =>{
             setError(error.message)
-            console.log(error.message)
+            // console.log(error.message)
         })
     }
 
@@ -40,10 +40,10 @@ const Login = () => {
         .then(result=>{
             const userData =result.user
              navigate( location.state || '/')
-            console.log(userData)
+            // console.log(userData)
         })
         .catch(error=>{
-            console.log(error)
+            // console.log(error)
         })
         
     }

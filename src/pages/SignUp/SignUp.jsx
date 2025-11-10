@@ -27,16 +27,16 @@ const SignUp = () => {
             return 
         }
 
-         console.log(Name,PhotoURL,Email,Password)
+        //  console.log(Name,PhotoURL,Email,Password)
 
          createUser(Email,Password)
          .then(result=>{
             const userData =result.user
-            console.log(userData)
+            // console.log(userData)
          })
          .catch(error =>{
              setError(error.message) 
-            console.log(error.message)
+            // console.log(error.message)
          })
 
          navigate('/')
@@ -46,10 +46,10 @@ const SignUp = () => {
         signInWithGoogle()
         .then(result=>{
             const userData =result.user
-            console.log(userData)
+            // console.log(userData)
         })
         .catch(error=>{
-            console.log(error)
+            // console.log(error)
         })
         navigate('/') 
     }

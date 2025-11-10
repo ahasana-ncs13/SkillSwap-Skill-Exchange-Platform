@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserSay = ({singleData}) => {
     const {feedback,image,name}=singleData
-    console.log(singleData,feedback,image,name)
+    // console.log(singleData,feedback,image,name)
     return (
        <div className="card lg:card-side bg-sky-100 shadow-sm p-5 ">
   <figure>

@@ -13,7 +13,7 @@ const UpdateProfile = () => {
         const Name = e.target.Name.value
         const PhotoURL = e.target.photoUrl.value
 
-        console.log(Name,PhotoURL)
+        // console.log(Name,PhotoURL)
 
         updateUserProfile({displayName: Name , photoURL: PhotoURL })
         .then(
@@ -23,7 +23,7 @@ const UpdateProfile = () => {
         )
         .catch(error =>{
               setUser(user)
-              console.log(error)
+            //   console.log(error)
             })
 
             navigate('/myProfile')

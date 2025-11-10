@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const MyProfile = () => {
     const {user}=use(AuthContext)
-    console.log(user)
+    // console.log(user)
     return (
         <div className='w-10/12 mx-auto text-center mt-5'>
            

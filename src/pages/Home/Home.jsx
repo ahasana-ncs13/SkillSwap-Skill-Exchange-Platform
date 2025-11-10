@@ -12,7 +12,7 @@ const userData = fetch('/usersdata.json')
 
 const Home = () => {
     const data = useLoaderData()
-    console.log(data)
+    // console.log(data)
     return (
         <div>
             

@@ -10,7 +10,7 @@ import { Navigation} from 'swiper/modules';
 
 
 const HeroSlider = ({data}) => {
-    // console.log(data)
+    // .log(data)
    
     return (
     <Swiper
