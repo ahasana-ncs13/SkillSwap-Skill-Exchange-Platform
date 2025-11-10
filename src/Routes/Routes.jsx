@@ -8,6 +8,7 @@ import SkillDetails from '../pages/skillDetails/skillDetails';
 import PrivateRoutes from './PrivateRoutes';
 import MyProfile from '../pages/MyProfile/MyProfile';
 import UpdateProfile from '../pages/UpdateProfile/UpdateProfile';
+import ForgetPassword from '../pages/ForgetPassword/ForgetPassword';
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
           element:<PrivateRoutes>
           <UpdateProfile></UpdateProfile>
           </PrivateRoutes>,
+        },
+        {
+          path:'/forgetPassword',
+          Component: ForgetPassword
         }
     ]
   }

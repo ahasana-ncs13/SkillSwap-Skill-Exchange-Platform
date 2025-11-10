@@ -83,17 +83,15 @@ const SignUp = () => {
           <input required  name='email' type="email" className="input" placeholder="Email" />
 
           {/* password  */}
-          <div className="">
+          <div className=" relative">
           <label className="label">Password</label>
-          <input required name='password' type= {showPassword? "text": "password"  } className="input relative" placeholder="Password" />
-          <button onClick={handleShowPassword}  className=' absolute bottom-53 left-80'>
-            {showPassword?  <LuEyeClosed /> : <FaRegEye />}
+          <input required name='password' type= {showPassword? "text": "password"  } className="input" placeholder="Password" />
+          <button onClick={handleShowPassword}  className=' absolute right-6 top-8'>
+            {showPassword? <FaRegEye /> : <LuEyeClosed />}
           </button>
 
           </div>
          
-
-          <div><a className="link link-hover">Forgot password?</a></div>
           <p className='text-red-500 font-semibold'>
             {
                 error

@@ -70,7 +70,7 @@ const Login = () => {
           <label className="label">Password</label>
           <input name='password' type= {showPassword? 'text' :"password" } className="input" placeholder="Password" required />
           <button onClick={handleShowPassword} className=' absolute right-6 top-8'> 
-            {showPassword? <LuEyeClosed />:<FaRegEye />}
+            {showPassword? <FaRegEye /> : <LuEyeClosed />}
           </button>
           </div>
 
@@ -80,7 +80,9 @@ const Login = () => {
             }
           </p>
 
-          <div><a className="link link-hover">Forgot password?</a></div>
+          <div>
+            <Link  to='/forgetPassword'className="link link-hover">Forgot password?</Link>
+            </div>
           <button className="btn bg-red-900 text-white mt-4">Login</button>
         </fieldset>
         </form>
