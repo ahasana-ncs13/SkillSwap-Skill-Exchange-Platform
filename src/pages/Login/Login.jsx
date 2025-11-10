@@ -39,12 +39,13 @@ const Login = () => {
         signInWithGoogle()
         .then(result=>{
             const userData =result.user
+             navigate( location.state || '/')
             console.log(userData)
         })
         .catch(error=>{
             console.log(error)
         })
-         navigate( location.state || '/')
+        
     }
 
     const handleShowPassword = ()=>{
